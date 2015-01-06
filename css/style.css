@@ -6289,6 +6289,17 @@ body {
   font-family: 'Lato', sans-serif;
   font-size: 12px;
 }
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  text-decoration: none;
+  text-shadow: none;
+}
+span {
+  color: white;
+}
 .ui-page {
   background-image: url("../img/chris-jaurique-iphone.jpg");
 }
@@ -6301,4 +6312,12 @@ body {
   font-size: 2rem;
   color: white;
   text-shadow: none;
+}
+.message-group {
+  overflow-y: auto;
+}
+.message-group ul li {
+  margin-top: .5em;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2em;
 }
