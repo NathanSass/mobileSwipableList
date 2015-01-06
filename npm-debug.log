@@ -1,0 +1,300 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'grunt',
+1 verbose cli   'grunt-contrib-less',
+1 verbose cli   'grunt-contrib-' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose cache add [ 'grunt', null ]
+5 verbose cache add name=undefined spec="grunt" args=["grunt",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'grunt',
+6 verbose parsed url   path: 'grunt',
+6 verbose parsed url   href: 'grunt' }
+7 verbose cache add [ 'grunt-contrib-less', null ]
+8 verbose cache add name=undefined spec="grunt-contrib-less" args=["grunt-contrib-less",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'grunt-contrib-less',
+9 verbose parsed url   path: 'grunt-contrib-less',
+9 verbose parsed url   href: 'grunt-contrib-less' }
+10 verbose cache add [ 'grunt-contrib-', null ]
+11 verbose cache add name=undefined spec="grunt-contrib-" args=["grunt-contrib-",null]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: 'grunt-contrib-',
+12 verbose parsed url   path: 'grunt-contrib-',
+12 verbose parsed url   href: 'grunt-contrib-' }
+13 silly lockFile 20ff3fd8-grunt grunt
+14 verbose lock grunt /Users/e750606/.npm/20ff3fd8-grunt.lock
+15 silly lockFile ec52cd20-grunt-contrib-less grunt-contrib-less
+16 verbose lock grunt-contrib-less /Users/e750606/.npm/ec52cd20-grunt-contrib-less.lock
+17 silly lockFile 1d96c5b2-grunt-contrib grunt-contrib-
+18 verbose lock grunt-contrib- /Users/e750606/.npm/1d96c5b2-grunt-contrib.lock
+19 silly lockFile 20ff3fd8-grunt grunt
+20 silly lockFile 20ff3fd8-grunt grunt
+21 silly lockFile ec52cd20-grunt-contrib-less grunt-contrib-less
+22 silly lockFile ec52cd20-grunt-contrib-less grunt-contrib-less
+23 silly lockFile 1d96c5b2-grunt-contrib grunt-contrib-
+24 silly lockFile 1d96c5b2-grunt-contrib grunt-contrib-
+25 verbose addNamed [ 'grunt', '' ]
+26 verbose addNamed [ null, '*' ]
+27 silly lockFile 55f1ff24-grunt grunt@
+28 verbose lock grunt@ /Users/e750606/.npm/55f1ff24-grunt.lock
+29 verbose addNamed [ 'grunt-contrib-less', '' ]
+30 verbose addNamed [ null, '*' ]
+31 silly lockFile df1440a2-grunt-contrib-less grunt-contrib-less@
+32 verbose lock grunt-contrib-less@ /Users/e750606/.npm/df1440a2-grunt-contrib-less.lock
+33 verbose addNamed [ 'grunt-contrib-', '' ]
+34 verbose addNamed [ null, '*' ]
+35 silly lockFile da904b22-grunt-contrib grunt-contrib-@
+36 verbose lock grunt-contrib-@ /Users/e750606/.npm/da904b22-grunt-contrib.lock
+37 silly addNameRange { name: 'grunt', range: '*', hasData: false }
+38 silly addNameRange { name: 'grunt-contrib-less', range: '*', hasData: false }
+39 verbose request where is /grunt-contrib-less
+40 verbose request registry https://registry.npmjs.org/
+41 verbose request id f434e73dac9e72e1
+42 verbose url raw /grunt-contrib-less
+43 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-less' ]
+44 verbose url resolved https://registry.npmjs.org/grunt-contrib-less
+45 verbose request where is https://registry.npmjs.org/grunt-contrib-less
+46 info trying registry request attempt 1 at 11:16:33
+47 http GET https://registry.npmjs.org/grunt-contrib-less
+48 silly addNameRange { name: 'grunt-contrib-', range: '*', hasData: false }
+49 verbose request where is /grunt-contrib-
+50 verbose request registry https://registry.npmjs.org/
+51 verbose url raw /grunt-contrib-
+52 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-' ]
+53 verbose url resolved https://registry.npmjs.org/grunt-contrib-
+54 verbose request where is https://registry.npmjs.org/grunt-contrib-
+55 info trying registry request attempt 1 at 11:16:33
+56 http GET https://registry.npmjs.org/grunt-contrib-
+57 verbose request where is /grunt
+58 verbose request registry https://registry.npmjs.org/
+59 verbose url raw /grunt
+60 verbose url resolving [ 'https://registry.npmjs.org/', './grunt' ]
+61 verbose url resolved https://registry.npmjs.org/grunt
+62 verbose request where is https://registry.npmjs.org/grunt
+63 info trying registry request attempt 1 at 11:16:33
+64 verbose etag "9YME9IWOOEV2URTSZ9SBGJD6J"
+65 http GET https://registry.npmjs.org/grunt
+66 http 304 https://registry.npmjs.org/grunt
+67 silly registry.get cb [ 304,
+67 silly registry.get   { date: 'Tue, 06 Jan 2015 19:16:33 GMT',
+67 silly registry.get     server: 'Apache',
+67 silly registry.get     via: '1.1 varnish',
+67 silly registry.get     'last-modified': 'Tue, 06 Jan 2015 19:16:32 GMT',
+67 silly registry.get     'cache-control': 'max-age=60',
+67 silly registry.get     etag: '"9YME9IWOOEV2URTSZ9SBGJD6J"',
+67 silly registry.get     age: '53',
+67 silly registry.get     'x-served-by': 'cache-lax1426-LAX',
+67 silly registry.get     'x-cache': 'HIT',
+67 silly registry.get     'x-cache-hits': '2',
+67 silly registry.get     'x-timer': 'S1420571793.742327,VS0,VE0',
+67 silly registry.get     vary: 'Accept',
+67 silly registry.get     'content-length': '0',
+67 silly registry.get     'keep-alive': 'timeout=10, max=50',
+67 silly registry.get     connection: 'Keep-Alive' } ]
+68 verbose etag https://registry.npmjs.org/grunt from cache
+69 silly addNameRange number 2 { name: 'grunt', range: '*', hasData: true }
+70 silly addNameRange versions [ 'grunt',
+70 silly addNameRange   [ '0.1.0',
+70 silly addNameRange     '0.1.1',
+70 silly addNameRange     '0.1.2',
+70 silly addNameRange     '0.2.0',
+70 silly addNameRange     '0.2.1',
+70 silly addNameRange     '0.2.2',
+70 silly addNameRange     '0.2.3',
+70 silly addNameRange     '0.2.4',
+70 silly addNameRange     '0.2.5',
+70 silly addNameRange     '0.2.6',
+70 silly addNameRange     '0.2.7',
+70 silly addNameRange     '0.2.8',
+70 silly addNameRange     '0.2.9',
+70 silly addNameRange     '0.2.10',
+70 silly addNameRange     '0.2.11',
+70 silly addNameRange     '0.2.12',
+70 silly addNameRange     '0.2.13',
+70 silly addNameRange     '0.2.14',
+70 silly addNameRange     '0.2.15',
+70 silly addNameRange     '0.3.0',
+70 silly addNameRange     '0.3.1',
+70 silly addNameRange     '0.3.2',
+70 silly addNameRange     '0.3.3',
+70 silly addNameRange     '0.3.4',
+70 silly addNameRange     '0.3.5',
+70 silly addNameRange     '0.3.6',
+70 silly addNameRange     '0.3.7',
+70 silly addNameRange     '0.3.8',
+70 silly addNameRange     '0.3.9',
+70 silly addNameRange     '0.3.10',
+70 silly addNameRange     '0.3.11',
+70 silly addNameRange     '0.3.12',
+70 silly addNameRange     '0.3.13',
+70 silly addNameRange     '0.3.14',
+70 silly addNameRange     '0.3.15',
+70 silly addNameRange     '0.3.16',
+70 silly addNameRange     '0.3.17',
+70 silly addNameRange     '0.4.0',
+70 silly addNameRange     '0.4.1',
+70 silly addNameRange     '0.4.2',
+70 silly addNameRange     '0.4.3',
+70 silly addNameRange     '0.4.4',
+70 silly addNameRange     '0.4.5',
+70 silly addNameRange     '0.3.13-a',
+70 silly addNameRange     '0.4.0-a',
+70 silly addNameRange     '0.4.0-rc1',
+70 silly addNameRange     '0.4.0-rc2',
+70 silly addNameRange     '0.4.0-rc3',
+70 silly addNameRange     '0.4.0-rc4',
+70 silly addNameRange     '0.4.0-rc5',
+70 silly addNameRange     '0.4.0-rc6',
+70 silly addNameRange     '0.4.0-rc7',
+70 silly addNameRange     '0.4.0-rc8' ] ]
+71 verbose addNamed [ 'grunt', '0.4.5' ]
+72 verbose addNamed [ '0.4.5', '0.4.5' ]
+73 silly lockFile 81abf7ad-grunt-0-4-5 grunt@0.4.5
+74 verbose lock grunt@0.4.5 /Users/e750606/.npm/81abf7ad-grunt-0-4-5.lock
+75 silly lockFile 81abf7ad-grunt-0-4-5 grunt@0.4.5
+76 silly lockFile 81abf7ad-grunt-0-4-5 grunt@0.4.5
+77 silly lockFile 55f1ff24-grunt grunt@
+78 silly lockFile 55f1ff24-grunt grunt@
+79 http 200 https://registry.npmjs.org/grunt-contrib-less
+80 silly registry.get cb [ 200,
+80 silly registry.get   { date: 'Tue, 06 Jan 2015 19:16:33 GMT',
+80 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+80 silly registry.get     etag: '"DUOVB0HO691G7AUWQUQUPMGTJ"',
+80 silly registry.get     'content-type': 'application/json',
+80 silly registry.get     'cache-control': 'max-age=60',
+80 silly registry.get     'content-length': '64325',
+80 silly registry.get     'accept-ranges': 'bytes',
+80 silly registry.get     via: '1.1 varnish',
+80 silly registry.get     age: '17',
+80 silly registry.get     'x-served-by': 'cache-lax1428-LAX',
+80 silly registry.get     'x-cache': 'HIT',
+80 silly registry.get     'x-cache-hits': '1',
+80 silly registry.get     'x-timer': 'S1420571793.741938,VS0,VE0',
+80 silly registry.get     vary: 'Accept',
+80 silly registry.get     'keep-alive': 'timeout=10, max=50',
+80 silly registry.get     connection: 'Keep-Alive' } ]
+81 silly addNameRange number 2 { name: 'grunt-contrib-less', range: '*', hasData: true }
+82 silly addNameRange versions [ 'grunt-contrib-less',
+82 silly addNameRange   [ '0.1.0',
+82 silly addNameRange     '0.2.0',
+82 silly addNameRange     '0.2.1',
+82 silly addNameRange     '0.2.2',
+82 silly addNameRange     '0.3.0',
+82 silly addNameRange     '0.3.1',
+82 silly addNameRange     '0.3.2',
+82 silly addNameRange     '0.5.0',
+82 silly addNameRange     '0.5.1',
+82 silly addNameRange     '0.5.2',
+82 silly addNameRange     '0.6.0',
+82 silly addNameRange     '0.6.1',
+82 silly addNameRange     '0.6.2',
+82 silly addNameRange     '0.6.3',
+82 silly addNameRange     '0.6.4',
+82 silly addNameRange     '0.6.5',
+82 silly addNameRange     '0.7.0',
+82 silly addNameRange     '0.8.0',
+82 silly addNameRange     '0.8.1',
+82 silly addNameRange     '0.8.2',
+82 silly addNameRange     '0.8.3',
+82 silly addNameRange     '0.9.0',
+82 silly addNameRange     '0.10.0',
+82 silly addNameRange     '0.11.0',
+82 silly addNameRange     '0.11.1',
+82 silly addNameRange     '0.11.2',
+82 silly addNameRange     '0.11.3',
+82 silly addNameRange     '0.11.4',
+82 silly addNameRange     '0.12.0',
+82 silly addNameRange     '1.0.0',
+82 silly addNameRange     '0.5.0-rc7' ] ]
+83 verbose addNamed [ 'grunt-contrib-less', '1.0.0' ]
+84 verbose addNamed [ '1.0.0', '1.0.0' ]
+85 silly lockFile 8e6efe10-grunt-contrib-less-1-0-0 grunt-contrib-less@1.0.0
+86 verbose lock grunt-contrib-less@1.0.0 /Users/e750606/.npm/8e6efe10-grunt-contrib-less-1-0-0.lock
+87 silly lockFile 91db1db2-ess-grunt-contrib-less-1-0-0-tgz https://registry.npmjs.org/grunt-contrib-less/-/grunt-contrib-less-1.0.0.tgz
+88 verbose lock https://registry.npmjs.org/grunt-contrib-less/-/grunt-contrib-less-1.0.0.tgz /Users/e750606/.npm/91db1db2-ess-grunt-contrib-less-1-0-0-tgz.lock
+89 verbose addRemoteTarball [ 'https://registry.npmjs.org/grunt-contrib-less/-/grunt-contrib-less-1.0.0.tgz',
+89 verbose addRemoteTarball   '370e5f18682bf4ea72a622fece416a08bb194523' ]
+90 info retry fetch attempt 1 at 11:16:33
+91 verbose fetch to= /var/folders/s1/hhswz0qx3337vsf62sbp_8vj46237l/T/npm-5602-A2cq7V8w/registry.npmjs.org/grunt-contrib-less/-/grunt-contrib-less-1.0.0.tgz
+92 http GET https://registry.npmjs.org/grunt-contrib-less/-/grunt-contrib-less-1.0.0.tgz
+93 http 200 https://registry.npmjs.org/grunt-contrib-less/-/grunt-contrib-less-1.0.0.tgz
+94 silly lockFile 91db1db2-ess-grunt-contrib-less-1-0-0-tgz https://registry.npmjs.org/grunt-contrib-less/-/grunt-contrib-less-1.0.0.tgz
+95 silly lockFile 91db1db2-ess-grunt-contrib-less-1-0-0-tgz https://registry.npmjs.org/grunt-contrib-less/-/grunt-contrib-less-1.0.0.tgz
+96 silly lockFile 8e6efe10-grunt-contrib-less-1-0-0 grunt-contrib-less@1.0.0
+97 silly lockFile 8e6efe10-grunt-contrib-less-1-0-0 grunt-contrib-less@1.0.0
+98 silly lockFile df1440a2-grunt-contrib-less grunt-contrib-less@
+99 silly lockFile df1440a2-grunt-contrib-less grunt-contrib-less@
+100 http 404 https://registry.npmjs.org/grunt-contrib-
+101 verbose headers { date: 'Tue, 06 Jan 2015 19:16:33 GMT',
+101 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+101 verbose headers   'content-type': 'application/json',
+101 verbose headers   'cache-control': 'max-age=0',
+101 verbose headers   'content-length': '52',
+101 verbose headers   'accept-ranges': 'bytes',
+101 verbose headers   via: '1.1 varnish',
+101 verbose headers   age: '0',
+101 verbose headers   'x-served-by': 'cache-lax1428-LAX',
+101 verbose headers   'x-cache': 'MISS',
+101 verbose headers   'x-cache-hits': '0',
+101 verbose headers   'x-timer': 'S1420571793.740240,VS0,VE182',
+101 verbose headers   'keep-alive': 'timeout=10, max=50',
+101 verbose headers   connection: 'Keep-Alive' }
+102 silly registry.get cb [ 404,
+102 silly registry.get   { date: 'Tue, 06 Jan 2015 19:16:33 GMT',
+102 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+102 silly registry.get     'content-type': 'application/json',
+102 silly registry.get     'cache-control': 'max-age=0',
+102 silly registry.get     'content-length': '52',
+102 silly registry.get     'accept-ranges': 'bytes',
+102 silly registry.get     via: '1.1 varnish',
+102 silly registry.get     age: '0',
+102 silly registry.get     'x-served-by': 'cache-lax1428-LAX',
+102 silly registry.get     'x-cache': 'MISS',
+102 silly registry.get     'x-cache-hits': '0',
+102 silly registry.get     'x-timer': 'S1420571793.740240,VS0,VE182',
+102 silly registry.get     'keep-alive': 'timeout=10, max=50',
+102 silly registry.get     connection: 'Keep-Alive' } ]
+103 silly lockFile da904b22-grunt-contrib grunt-contrib-@
+104 silly lockFile da904b22-grunt-contrib grunt-contrib-@
+105 error 404 404 Not Found: grunt-contrib-
+105 error 404
+105 error 404 'grunt-contrib-' is not in the npm registry.
+105 error 404 You should bug the author to publish it
+105 error 404
+105 error 404 Note that you can also install from a
+105 error 404 tarball, folder, or http url, or git url.
+106 error System Darwin 13.4.0
+107 error command "node" "/usr/local/bin/npm" "install" "grunt" "grunt-contrib-less" "grunt-contrib-"
+108 error cwd /Users/e750606/Documents/mobileSwipableList
+109 error node -v v0.10.32
+110 error npm -v 1.4.28
+111 error code E404
+112 verbose exit [ 1, true ]

@@ -1,0 +1,17 @@
+{
+  "name": "mobileSwipableList",
+  "version": "0.0.0",
+  "homepage": "https://github.com/NathanSass/mobileSwipableList",
+  "authors": [
+    "Nathan Sass <Nathan.Sass@chase.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
