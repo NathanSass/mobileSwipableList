@@ -6317,6 +6317,7 @@ span {
   overflow-y: auto;
 }
 .message-group ul li {
+  font-size: 1.5rem;
   margin-top: .5em;
   background: rgba(0, 0, 0, 0.5);
   padding: 2em;
