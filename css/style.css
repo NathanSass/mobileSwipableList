@@ -6321,9 +6321,13 @@ span {
   margin-top: .5em;
 }
 .message-group ul li .message-item {
+  display: inline-block;
+  position: relative;
+  width: 100%;
   background: rgba(0, 0, 0, 0.5);
   padding: 2em;
   color: white;
-  overflow: hidden;
-  white-space: nowrap;
+}
+.message-group ul li .actionable {
+  display: inline-block;
 }
