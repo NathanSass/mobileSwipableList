@@ -28,12 +28,15 @@ $(function() {
 
   	$(ev.target).closest('li').on('touchmove mousemove', function(e){
     	e.preventDefault();
-    	currentDistX = getCoord(e, 'X');
-    	currentDistY = getCoord(e, 'Y');
-    	if(currentDistX - startX > 0){ //Do something here to account for vertical swiping
-    		console.log("swipingright");
+    	currentX = getCoord(e, 'X');
+    	currentY = getCoord(e, 'Y');
+    	if(currentX - startX < 0){ //Do something here to account for vertical swiping
+    		console.log("swipingleft");
     		// debugger
-    		$(e.target).css("padding-left", currentDistX - startX + "px")
+    		var distance =  startX - currentX;
+    		// console.log(dist)
+    		$(e.target).css("-webkit-transform", "translateX(" + -distance + "px)")
+    		// $(e.target).css("-webkit-transform", "translateX(" + startX - currentDistX + "px)")
     	}
 
     })

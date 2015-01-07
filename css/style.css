@@ -6319,10 +6319,11 @@ span {
 .message-group ul li {
   font-size: 1.5rem;
   margin-top: .5em;
+}
+.message-group ul li .message-item {
   background: rgba(0, 0, 0, 0.5);
   padding: 2em;
-}
-.message-group ul li span {
+  color: white;
   overflow: hidden;
   white-space: nowrap;
 }
