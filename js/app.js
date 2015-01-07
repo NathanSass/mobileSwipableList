@@ -28,11 +28,13 @@ $(function() {
 
   	$(ev.target).closest('li').on('touchmove mousemove', function(e){
     	e.preventDefault();
-    	// debugger
     	currentDistX = getCoord(e, 'X');
     	currentDistY = getCoord(e, 'Y');
-    	console.log("currentDistX", startX, currentDistX);
-    	console.log("currentDistY", startY, currentDistY);
+    	if(currentDistX - startX > 0){ //Do something here to account for vertical swiping
+    		console.log("swipingright");
+    		// debugger
+    		$(e.target).css("padding-left", currentDistX - startX + "px")
+    	}
 
     })
 

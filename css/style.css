@@ -6322,3 +6322,7 @@ span {
   background: rgba(0, 0, 0, 0.5);
   padding: 2em;
 }
+.message-group ul li span {
+  overflow: hidden;
+  white-space: nowrap;
+}
