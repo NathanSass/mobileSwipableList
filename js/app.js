@@ -13,20 +13,29 @@ $(function() {
   //     debugger
   //     e.preventDefault();
 		// });
+	// var startX,
+	// 	startY;
+
+	function getCoord (e, c) {
+		return /touch/.test(e.type) ? (e.originalEvent || e).changedTouches[0]['page' + c] : e['page' + c];
+	}
+
+	$(".message-group li")
+  .on('touchstart mousedown', function(ev){
+		startX = getCoord(ev, 'X');
+		startY = getCoord(ev, 'Y');
 
 
-		$(".message-group li")
-    .on('touchstart mousedown', function(e){
+  	$(ev.target).closest('li').on('touchmove mousemove', function(e){
     	e.preventDefault();
-    	// console.log("hkjh")
     	// debugger
-    	$(e.target).closest('li')
-	    .on('touchmove mousemove', function(e){
-	    	e.preventDefault();
-	    	// debugger
-	    	$(e.target).closest('li span').css("color","red")
-	    })
+    	currentDistX = getCoord(e, 'X');
+    	currentDistY = getCoord(e, 'Y');
+    	console.log("currentDistX", startX, currentDistX);
+    	console.log("currentDistY", startY, currentDistY);
 
     })
-    // .on('touchend touchcancel', function(e){debugger})
+
+  })
+  // .on('touchend touchcancel', function(e){debugger})
 });
