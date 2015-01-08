@@ -6331,3 +6331,10 @@ span {
 .message-group ul li .actionable {
   display: inline-block;
 }
+li.focus {
+  background-color: red;
+}
+li.focus .message-item {
+  background: #000000;
+  width: 66%;
+}
