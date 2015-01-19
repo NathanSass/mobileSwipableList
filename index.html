@@ -16,14 +16,15 @@
 
 </head>
 <body>
-  	<div class="mobile-notif">
+	<div id='container'></div>
+	<div class="mobile-notif">
 		<span>Messages</span>
 	</div>
 	<div class="message-group">
 		<ul>
 			<li class="focus">
-				<div id="container" class="message-item">
-					
+				<div class="message-item">
+					BLAUU
 				</div>
 				<div class="actionable hidden">
 					 <span>V</span><span>CLICK ME</span>
@@ -57,21 +58,8 @@
 	</div>
 
 	<script id='template' type='text/ractive'>
-		{{message}}
+			<div decorator='swipeable'></div>
 	</script>
 
-	<script>
-    var ractive = new Ractive({
-      // The `el` option can be a node, an ID, or a CSS selector.
-      el: 'container',
-
-      // We could pass in a string, but for the sake of convenience
-      // we're passing the ID of the <script> tag above.
-      template: '#template',
-
-      // Here, we're passing in some initial data
-      data: { message: 'Make an awesome new years resolution and try to keep it.' }
-    });
-  </script>
 </body>
 </html>
