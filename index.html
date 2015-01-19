@@ -9,20 +9,21 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src='http://cdn.ractivejs.org/latest/ractive.min.js'></script>
 	
 	<link rel="stylesheet" href="css/style.css" />
 	<script src="js/app.js"></script>
 
 </head>
 <body>
-	<div class="mobile-notif">
+  	<div class="mobile-notif">
 		<span>Messages</span>
 	</div>
 	<div class="message-group">
 		<ul>
 			<li class="focus">
-				<div class="message-item">
-					Make an awesome new years resolution and try to keep it.
+				<div id="container" class="message-item">
+					
 				</div>
 				<div class="actionable hidden">
 					 <span>V</span><span>CLICK ME</span>
@@ -54,5 +55,23 @@
 			</li>
 		</ul>
 	</div>
+
+	<script id='template' type='text/ractive'>
+		{{message}}
+	</script>
+
+	<script>
+    var ractive = new Ractive({
+      // The `el` option can be a node, an ID, or a CSS selector.
+      el: 'container',
+
+      // We could pass in a string, but for the sake of convenience
+      // we're passing the ID of the <script> tag above.
+      template: '#template',
+
+      // Here, we're passing in some initial data
+      data: { message: 'Make an awesome new years resolution and try to keep it.' }
+    });
+  </script>
 </body>
 </html>
