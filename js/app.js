@@ -38,11 +38,18 @@ $(function() {
 
   Ractive.decorators.swipeable = swipeableDecorator;
 
-var ractive = new Ractive({
-  el: 'container',
+  var templateData = [
+    { message: "Do not take California weather for granted.", class: "focus"},
+    { message: "Focus Better." },
+    { message: "Wake up Earlier."}
+  ]
+  var ractive = new Ractive({
+    el: 'container',
 
-  template: '#template'
-});
+    template: '#template',
+
+    data: { message: templateData}
+  });
 
 
   // .on('touchend touchcancel', function(e){debugger})

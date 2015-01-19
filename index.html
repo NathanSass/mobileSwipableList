@@ -24,38 +24,16 @@
 	<script id='template' type='text/ractive'>
 		<div class="message-group">
 			<ul>
-				<li class="focus" decorator="swipeable">
+			{{#each message}}
+				<li decorator="swipeable" class="{{class}}">
 					<div class="message-item">
-						BLAUU
+						{{message}}
 					</div>
 					<div class="actionable hidden">
 						 <span>V</span><span>CLICK ME</span>
 					</div>
 				</li>
-				<li>
-					<div class="message-item">
-						Do not take California weather for granted.
-					</div>
-					<div class="actionable hidden">
-						 <span>V</span><span>CLICK ME</span>
-					</div>
-				</li>
-				<li>
-					<div class="message-item">
-						Focus Better.
-					</div>
-					<div class="actionable hidden">
-						 <span>V</span><span>CLICK ME</span>
-					</div>
-				</li>
-				<li>
-					<div class="message-item">
-						Wake up Earlier.
-					</div>
-					<div class="actionable hidden">
-						 <span>V</span><span>CLICK ME</span>
-					</div>
-				</li>
+			{{/each}}
 			</ul>
 		</div>
 	</script>
