@@ -1,30 +1,37 @@
 $(function() {
   var swipeableDecorator= function(node,content) {
-    var $listItem,
+    var $node,
         startX,
-        startY;
+        startY,
+        currentMessage,
+        currentMessageActions;
 
-    function getCoord (e, c) {
+    function _getCoord (e, c) {
       return /touch/.test(e.type) ? (e.originalEvent || e).changedTouches[0]['page' + c] : e['page' + c];
     }
 
-    $listItem = $(node);
-  		// startX = getCoord(ev, 'X');
-  		// startY = getCoord(ev, 'Y');
+    $node = $(node);
+      // startY = getCoord(e, 'Y');
 
-    $(node).on('touchstart mousedown', swipeStart)
+    $node.on('touchstart mousedown', swipeStart)
       .on('touchmove mousemove', swipeMove)
       .on('touchend mouseup mouseleave mouseout', swipeEnd)
 
     function swipeStart(e){
       console.log("in swipeStart")
+      currentMessage = $node.find("message-item");
+      currentMessageActions = $node.find("actionable");
+      // Add in the classes I'm going to add / remove
+  		startX = _getCoord(e, 'X');
     }
 
     function swipeMove(e){
+      e.preventDefault();
       console.log("in swipeMove")
     }
 
     function swipeEnd(e){
+      e.preventDefault();
       console.log("in swipeEnd")
     }
     return {
