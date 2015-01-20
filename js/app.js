@@ -1,37 +1,34 @@
 $(function() {
   var swipeableDecorator= function(node,content) {
-    
-    console.log("in swipeable");
-    
+    var $listItem,
+        startX,
+        startY;
+
     function getCoord (e, c) {
       return /touch/.test(e.type) ? (e.originalEvent || e).changedTouches[0]['page' + c] : e['page' + c];
     }
 
-  	$(".message-group li")
-    .on('touchstart mousedown', function(ev){
-  		startX = getCoord(ev, 'X');
-  		startY = getCoord(ev, 'Y');
+    $listItem = $(node);
+  		// startX = getCoord(ev, 'X');
+  		// startY = getCoord(ev, 'Y');
 
+    $(node).on('touchstart mousedown', swipeStart)
+      .on('touchmove mousemove', swipeMove)
+      .on('touchend mouseup mouseleave mouseout', swipeEnd)
 
-    	$(ev.target).closest('li').on('touchmove mousemove', function(e){
-      	e.preventDefault();
-      	currentX = getCoord(e, 'X');
-      	currentY = getCoord(e, 'Y');
-      	if(currentX - startX < 0){ //Do something here to account for vertical swiping
-      		console.log("swipingleft");
-      		// debugger
-      		var distance =  startX - currentX;
-      		// console.log(dist)
-      		$(e.target).css("-webkit-transform", "translateX(" + -distance + "px)")
-      		// $(e.target).css("-webkit-transform", "translateX(" + startX - currentDistX + "px)")
-      	}
+    function swipeStart(e){
+      console.log("in swipeStart")
+    }
 
-      })
+    function swipeMove(e){
+      console.log("in swipeMove")
+    }
 
-    })
+    function swipeEnd(e){
+      console.log("in swipeEnd")
+    }
     return {
       teardown: function(){
-
       }
     }
   }
@@ -41,16 +38,14 @@ $(function() {
   var templateData = [
     { message: "Do not take California weather for granted.", class: "focus"},
     { message: "Focus Better." },
-    { message: "Wake up Earlier."}
+    { message: "Wake up Earlier."},
+    { message: "Wear Sunscreen"}
   ]
+  
   var ractive = new Ractive({
     el: 'container',
-
     template: '#template',
-
     data: { message: templateData}
   });
 
-
-  // .on('touchend touchcancel', function(e){debugger})
 });
