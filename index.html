@@ -17,11 +17,11 @@
 </head>
 <body>
 	<div class="mobile-notif">
-		<span>Messages</span>
+		<span>One Year Plan</span>
 	</div>
 	
 	<div id='container'></div>
-	
+
 	<script id='template' type='text/ractive'>
 		<div class="message-group">
 			<ul>
@@ -30,8 +30,12 @@
 					<div class="message-item">
 						{{message}}
 					</div>
-					<div class="actionable hidden">
-						 <span>V</span><span>CLICK ME</span>
+					<div class="actionable">
+						<div class="wrapper">
+							<div class="aligner">
+							 <a href="">V</a><a>CLICK ME</a>
+							</div>
+						</div>
 					</div>
 				</li>
 			{{/each}}

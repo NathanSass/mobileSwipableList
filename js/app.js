@@ -18,21 +18,21 @@ $(function() {
       .on('touchend mouseup mouseleave mouseout', swipeEnd)
 
     function swipeStart(e){
-      console.log("in swipeStart")
+      // console.log("in swipeStart")
       currentMessage = $node.find("message-item");
       currentMessageActions = $node.find("actionable");
-      // Add in the classes I'm going to add / remove
+      $node.addClass("focus")
   		startX = _getCoord(e, 'X');
     }
 
     function swipeMove(e){
       e.preventDefault();
-      console.log("in swipeMove")
+      // console.log("in swipeMove")
     }
 
     function swipeEnd(e){
       e.preventDefault();
-      console.log("in swipeEnd")
+      // console.log("in swipeEnd")
     }
     return {
       teardown: function(){
@@ -46,7 +46,8 @@ $(function() {
     { message: "Do not take California weather for granted.", class: "focus"},
     { message: "Focus Better." },
     { message: "Wake up Earlier."},
-    { message: "Wear Sunscreen"}
+    { message: "Wear Sunscreen"},
+    { message: "Get Better at Swing Dancing"}
   ]
   
   var ractive = new Ractive({
