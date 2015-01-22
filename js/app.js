@@ -36,16 +36,18 @@ $(function() {
     }
 
     function swipeMove(e){
-      console.log("in swipe move")
+      // console.log("in swipe move")
       e.preventDefault();
       if(isSwiping){
-        console.log("---- in swipe move")
+        // console.log("---- in swipe move")
         currentX = _getCoord(e, 'X');
         distance = -(startX - currentX);
         distance = _getPercent(distance)
         distance = Math.max(distance, -50);
         distance = Math.min(distance, 0);
         currentMessage.css("left", distance + "%");
+        currentMessageActions.css("opacity", -distance / 100 + .50);
+
       }
     }
 
