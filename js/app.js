@@ -4,35 +4,57 @@ $(function() {
         startX,
         startY,
         currentMessage,
-        currentMessageActions;
+        currentMessageActions,
+        isSwiping,
+        distance,
+        currentX;
 
     function _getCoord (e, c) {
       return /touch/.test(e.type) ? (e.originalEvent || e).changedTouches[0]['page' + c] : e['page' + c];
     }
+    function _getPercent (distance){
+      maxSlide = window.innerWidth - (window.innerWidth * .5) //buttons are set to take up 50% of the width
+      if (distance) {
+        return (distance / maxSlide) * 100;
+      }
+      return 0;
+    }
 
     $node = $(node);
-      // startY = getCoord(e, 'Y');
 
     $node.on('touchstart mousedown', swipeStart)
       .on('touchmove mousemove', swipeMove)
       .on('touchend mouseup mouseleave mouseout', swipeEnd)
 
     function swipeStart(e){
-      // console.log("in swipeStart")
-      currentMessage = $node.find("message-item");
-      currentMessageActions = $node.find("actionable");
-      $node.addClass("focus")
+      console.log("in swipeStart")
+      currentMessage = $node.find(".message-item");
+      currentMessageActions = $node.find(".actionable");
+      $node.addClass("focus");
   		startX = _getCoord(e, 'X');
+      isSwiping = true;
     }
 
     function swipeMove(e){
+      console.log("in swipe move")
       e.preventDefault();
-      // console.log("in swipeMove")
+      if(isSwiping){
+        console.log("---- in swipe move")
+        currentX = _getCoord(e, 'X');
+        distance = -(startX - currentX);
+        distance = _getPercent(distance)
+        distance = Math.max(distance, -50);
+        distance = Math.min(distance, 0);
+        currentMessage.css("left", distance + "%");
+      }
     }
 
     function swipeEnd(e){
+      console.log("in swipeEnd")
       e.preventDefault();
-      // console.log("in swipeEnd")
+      if(currentMessage){
+        isSwiping = false;
+      }
     }
     return {
       teardown: function(){
@@ -43,7 +65,7 @@ $(function() {
   Ractive.decorators.swipeable = swipeableDecorator;
 
   var templateData = [
-    { message: "Do not take California weather for granted.", class: "focus"},
+    { message: "Do not take California weather for granted."},
     { message: "Focus Better." },
     { message: "Wake up Earlier."},
     { message: "Wear Sunscreen"},
