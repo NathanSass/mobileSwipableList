@@ -24,10 +24,10 @@ $(function() {
 
     $node.on('touchstart mousedown', swipeStart)
       .on('touchmove mousemove', swipeMove)
-      .on('touchend mouseup mouseleave mouseout', swipeEnd)
+      .on('touchend mouseup mouseleave', swipeEnd)
 
     function swipeStart(e){
-      console.log("in swipeStart")
+      // console.log("in swipeStart")
       currentMessage = $node.find(".message-item");
       currentMessageActions = $node.find(".actionable");
       $node.addClass("focus");
@@ -36,7 +36,7 @@ $(function() {
     }
 
     function swipeMove(e){
-      // console.log("in swipe move")
+      console.log("in swipe move")
       e.preventDefault();
       if(isSwiping){
         // console.log("---- in swipe move")
@@ -52,7 +52,7 @@ $(function() {
     }
 
     function swipeEnd(e){
-      console.log("in swipeEnd")
+      // console.log("in swipeEnd")
       e.preventDefault();
       if(currentMessage){
         isSwiping = false;
