@@ -42,6 +42,7 @@ $(function() {
 
     function swipeStart(e){
       _resetList();
+
       $currentMessage = $node.find(".message-item");
       $currentMessageActions = $node.find(".actionable");
       $node.addClass("focus");

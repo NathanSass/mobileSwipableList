@@ -56,13 +56,12 @@ span{
 				transition: background .4s ease-out;
 			}
 			.actionable{
-				// display: none;
 				position: absolute;
 				top: 0;
 				right: 0;
 				opacity: 0;
 				height: 100%;
-				width: 50%;
+				width: 50%; //coordinate this with the JS
 				z-index: @zindex;
 				transition: opacity .8s ease-out;
 			}
@@ -79,7 +78,7 @@ span{
 						vertical-align: middle;
 						text-align: center;
 						&.closer{
-							width: 15%;
+							width: 35%;
 							background: white;
 						}
 						&.do-it{
