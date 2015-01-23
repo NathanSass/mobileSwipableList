@@ -92,28 +92,23 @@ span{
 				.message-item{
 					background: rgba(0, 0, 0, 1);
 				}
-				&.open{
-					.message-item{
-						transition: left .5s ease-out;
-						left: -50%;
-					}
+			} 
+			&.open{
+				.message-item{
+					transition: left .5s ease-out;
+					left: -50%;
 				}
-				.actionable{
-					// display: block;
-					// position: absolute;
-					// top: 0;
-					// right: 0;
-				}
+			}
 			&.closed{
 				.message-item{
-					transition: left .8s ease-out;
+					background: rgba(0, 0, 0, 0.5);
 					left: 0%;
+					transition: background .5s ease-out, left .8s ease-out;
 				}
 				.actionable{
 					opacity: 0;
 				}
 			}
-			} //closes focus
 		}
 	}
 }

@@ -6613,14 +6613,15 @@ span {
 .message-group ul li.focus .message-item {
   background: #000000;
 }
-.message-group ul li.focus.open .message-item {
+.message-group ul li.open .message-item {
   transition: left 0.5s ease-out;
   left: -50%;
 }
-.message-group ul li.focus.closed .message-item {
-  transition: left 0.8s ease-out;
+.message-group ul li.closed .message-item {
+  background: rgba(0, 0, 0, 0.5);
   left: 0%;
+  transition: background 0.5s ease-out, left 0.8s ease-out;
 }
-.message-group ul li.focus.closed .actionable {
+.message-group ul li.closed .actionable {
   opacity: 0;
 }
