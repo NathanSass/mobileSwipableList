@@ -56,11 +56,15 @@ span{
 				transition: background .4s ease-out;
 			}
 			.actionable{
-				display: none;
+				// display: none;
+				position: absolute;
+				top: 0;
+				right: 0;
 				opacity: 0;
 				height: 100%;
 				width: 50%;
 				z-index: @zindex;
+				transition: opacity .8s ease-out;
 			}
 			.wrapper{
 				display: table;
@@ -88,30 +92,28 @@ span{
 				.message-item{
 					background: rgba(0, 0, 0, 1);
 				}
-			&.open{
-				.message-item{
-					transition: left .5s ease-out;
-					left: -50%;
+				&.open{
+					.message-item{
+						transition: left .5s ease-out;
+						left: -50%;
+					}
 				}
-			}
+				.actionable{
+					// display: block;
+					// position: absolute;
+					// top: 0;
+					// right: 0;
+				}
 			&.closed{
 				.message-item{
 					transition: left .8s ease-out;
 					left: 0%;
 				}
-			}
-			&.swiping{
-				.message-item{
-					transition: none;
-				}
-			}
 				.actionable{
-					display: block;
-					position: absolute;
-					top: 0;
-					right: 0;
+					opacity: 0;
 				}
 			}
+			} //closes focus
 		}
 	}
 }

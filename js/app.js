@@ -8,7 +8,7 @@ $(function() {
         isSwiping,
         distance,
         currentX;
-    var THRESHOLD = 25;
+    var THRESHOLD = 35;
 
     function _getCoord (e, c) {
       return /touch/.test(e.type) ? (e.originalEvent || e).changedTouches[0]['page' + c] : e['page' + c];
@@ -60,6 +60,7 @@ $(function() {
         isSwiping = false;
         if(-distance < THRESHOLD){
           currentMessage.attr("style", "")
+          currentMessageActions.attr("style", "")
           $node.addClass("closed")
           // $node.removeClass("focus")
           $node.removeClass("open")
