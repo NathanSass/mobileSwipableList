@@ -8,7 +8,7 @@ $(function() {
         isSwiping,
         distance,
         currentX;
-    var THRESHOLD = 50;
+    var THRESHOLD = 25;
 
     function _getCoord (e, c) {
       return /touch/.test(e.type) ? (e.originalEvent || e).changedTouches[0]['page' + c] : e['page' + c];
@@ -32,7 +32,8 @@ $(function() {
       currentMessage = $node.find(".message-item");
       currentMessageActions = $node.find(".actionable");
       $node.addClass("focus");
-  		startX = _getCoord(e, 'X');
+      $node.removeClass("closed");
+      startX = _getCoord(e, 'X');
       isSwiping = true;
     }
 
@@ -43,11 +44,11 @@ $(function() {
         // console.log("---- in swipe move")
         currentX = _getCoord(e, 'X');
         distance = -(startX - currentX);
-        distance = _getPercent(distance)
-        distance = Math.max(distance, -50);
-        distance = Math.min(distance, 0);
+        distance = Math.min(Math.max(_getPercent(distance), -50), 0);
+        
         currentMessage.css("left", distance + "%");
         currentMessageActions.css("opacity", -distance / 100 + .50);
+        console.log(-distance)
 
       }
     }
@@ -57,6 +58,18 @@ $(function() {
       e.preventDefault();
       if(currentMessage){
         isSwiping = false;
+        if(-distance < THRESHOLD){
+          currentMessage.attr("style", "")
+          $node.addClass("closed")
+          // $node.removeClass("focus")
+          $node.removeClass("open")
+
+
+
+        }else if(-distance > THRESHOLD){
+          currentMessage.attr("style", "")
+          $node.addClass("open")
+        }
         // currentMessage.attr("style", "")
         // currentMessageActions.attr("style", "")
         // $node.removeClass("focus")
