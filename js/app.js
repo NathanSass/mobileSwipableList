@@ -52,7 +52,6 @@ $(function() {
     }
 
     function swipeMove(e){
-      console.log("in swipe move")
       e.preventDefault();
       if(isSwiping){
 
@@ -62,7 +61,6 @@ $(function() {
         
         $currentMessage.css("left", distance + "%");
         $currentMessageActions.css("opacity", -distance / 100 + .50);
-        console.log(-distance)
 
       }
     }
@@ -98,9 +96,15 @@ $(function() {
     { message: "Focus Better.", class: "closed"},
     { message: "Wake up Earlier.", class: "closed"},
     { message: "Wear Sunscreen", class: "closed"},
-    { message: "Get Better at Swing Dancing", class: "closed"}
+    { message: "Get Better at Swing Dancing", class: "closed"},
+    { message: "Follow my dreams", class: "closed" },
+    { message: "Never Give Up", class: "closed" },
+    { message: "Ever", class: "closed"}
   ]
   
+
+
+
   var ractive = new Ractive({
     el: 'container',
     template: '#template',

@@ -6562,6 +6562,9 @@ span {
 }
 .message-group {
   overflow-y: auto;
+  height: 90%;
+  width: 100%;
+  position: fixed;
 }
 .message-group ul li {
   font-size: 1.5rem;
