@@ -14,4 +14,4 @@ I wrote it as a ractive decorator so it would be easy to use in another project.
 ```
 And then the javascript will toggle the correct classes. 
 
-I'm controlling the animations with css3 animations.
+I'm controlling the animations with css3.
