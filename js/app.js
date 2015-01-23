@@ -92,7 +92,7 @@ $(function() {
   Ractive.decorators.swipeable = swipeableDecorator;
 
   var templateData = [
-    { message: "Do not take California weather for granted.", class: "closed" },
+    { message: "aDo not take California weather for granted.", class: "closed" },
     { message: "Focus Better.", class: "closed"},
     { message: "Wake up Earlier.", class: "closed"},
     { message: "Wear Sunscreen", class: "closed"},

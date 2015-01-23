@@ -6561,10 +6561,11 @@ span {
   text-shadow: none;
 }
 .message-group {
-  overflow-y: auto;
+  overflow-y: scroll;
   height: 90%;
   width: 100%;
   position: fixed;
+  -webkit-overflow-scrolling: touch;
 }
 .message-group ul li {
   font-size: 1.5rem;
