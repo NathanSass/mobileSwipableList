@@ -41,6 +41,8 @@ $(function() {
       .on('touchend mouseup mouseleave', swipeEnd)
 
     function swipeStart(e){
+      e.preventDefault();
+
       _resetList();
 
       $currentMessage = $node.find(".message-item");
@@ -92,7 +94,7 @@ $(function() {
   Ractive.decorators.swipeable = swipeableDecorator;
 
   var templateData = [
-    { message: "aDo not take California weather for granted.", class: "closed" },
+    { message: "Do not take California weather for granted.", class: "closed" },
     { message: "Focus Better.", class: "closed"},
     { message: "Wake up Earlier.", class: "closed"},
     { message: "Wear Sunscreen", class: "closed"},
