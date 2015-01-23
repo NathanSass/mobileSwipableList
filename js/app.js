@@ -8,6 +8,7 @@ $(function() {
         isSwiping,
         distance,
         currentX;
+    var THRESHOLD = 50;
 
     function _getCoord (e, c) {
       return /touch/.test(e.type) ? (e.originalEvent || e).changedTouches[0]['page' + c] : e['page' + c];
@@ -56,6 +57,9 @@ $(function() {
       e.preventDefault();
       if(currentMessage){
         isSwiping = false;
+        // currentMessage.attr("style", "")
+        // currentMessageActions.attr("style", "")
+        // $node.removeClass("focus")
       }
     }
     return {
@@ -67,11 +71,11 @@ $(function() {
   Ractive.decorators.swipeable = swipeableDecorator;
 
   var templateData = [
-    { message: "Do not take California weather for granted."},
-    { message: "Focus Better." },
-    { message: "Wake up Earlier."},
-    { message: "Wear Sunscreen"},
-    { message: "Get Better at Swing Dancing"}
+    { message: "Do not take California weather for granted.", class: "closed" },
+    { message: "Focus Better.", class: "closed"},
+    { message: "Wake up Earlier.", class: "closed"},
+    { message: "Wear Sunscreen", class: "closed"},
+    { message: "Get Better at Swing Dancing", class: "closed"}
   ]
   
   var ractive = new Ractive({

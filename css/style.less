@@ -45,7 +45,6 @@ span{
 			margin-top: .5em;
 			position: relative;
 			.message-item{
-				// display: inline-block;
 				position: relative;
 				width: 100%;
 				background: rgba(0, 0, 0, 0.5);
@@ -53,9 +52,12 @@ span{
 				color: white;
 				padding: 2em;
 				z-index: @zindex + 1;
+				left: 0%;
+				transition: background .4s ease-out, left .5s ease-out;
 			}
 			.actionable{
 				display: none;
+				opacity: 0;
 				height: 100%;
 				width: 50%;
 				z-index: @zindex;
@@ -84,9 +86,23 @@ span{
 			}
 			&.focus{
 				.message-item{
-					background: rgba(0, 0, 0, 1); //turn this to black
-					// left: -100px;
+				background: rgba(0, 0, 0, 1);
 				}
+			&.open{
+				.message-item{
+					left: -50%;
+				}
+			}
+			&.closed{
+				.message-item{
+					left: 0%;
+				}
+			}
+			&.swiping{
+				.message-item{
+					transition: none;
+				}
+			}
 				.actionable{
 					display: block;
 					position: absolute;
