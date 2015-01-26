@@ -41,7 +41,7 @@ $(function() {
       .on('touchend mouseup mouseleave', swipeEnd)
 
     function swipeStart(e){
-      e.preventDefault();
+    //  e.preventDefault();
 
       _resetList();
 
@@ -54,7 +54,7 @@ $(function() {
     }
 
     function swipeMove(e){
-      e.preventDefault();
+     // e.preventDefault();
       if(isSwiping){
 
         currentX = _getCoord(e, 'X');
@@ -68,7 +68,7 @@ $(function() {
     }
 
     function swipeEnd(e){
-      e.preventDefault();
+      //e.preventDefault();
       if($currentMessage){
         isSwiping = false;
         if(-distance < THRESHOLD){
